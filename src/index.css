@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+:root {
+  --color-primary: #16a393;
+  --color-text: #4b5563;
+  --color-bg: #ffffff;
+  --color-surface: #4b5563;
+  --background-image: linear-gradient(
+    to right,
+    #6ca8f6,
+    rgb(174, 141, 9),
+    #6ca8f6
+  );
+  --background-overlay: white;
+}
+
+.dark {
+  --color-primary: #16a393;
+  --color-text: #b8b6b6;
+  --color-bg: #0f172a;
+  --color-surface: #b8b6b6;
+  --background-image: url(/src/assets/background-images/dark-bg.jpg);
+  --background-overlay: #0f172a;
+}
+
+/* Base styles */
+html {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* * {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+} */
+
+/* Custom utility classes */
+.text-text {
+  color: var(--color-text);
+}
+
+.bg-bg {
+  background-color: var(--color-bg);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-surface {
+  border-color: var(--color-surface);
+}
+
+.bg-image {
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  /* backdrop-filter: blur(20px); */
+}
+
+.bg-overlay {
+  background-color: var(--background-overlay);
+  opacity: 0.8;
+}
