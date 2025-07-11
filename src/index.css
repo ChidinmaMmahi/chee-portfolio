@@ -3,21 +3,18 @@
 :root {
   --color-primary: #16a393;
   --color-text: #4b5563;
-  --color-bg: #ffffff;
+  --color-bg-1: #f6f6f6;
+  --color-bg-2: #ffffff;
   --color-surface: #4b5563;
-  --background-image: linear-gradient(
-    to right,
-    #6ca8f6,
-    rgb(174, 141, 9),
-    #6ca8f6
-  );
-  --background-overlay: white;
+  --background-image: url(/src/assets/background-images/light-bg.jpg);
+  --background-overlay: #0f172a0c;
 }
 
 .dark {
   --color-primary: #16a393;
   --color-text: #b8b6b6;
-  --color-bg: #0f172a;
+  --color-bg-1: #0f172a;
+  --color-bg-2: #0f172aea;
   --color-surface: #b8b6b6;
   --background-image: url(/src/assets/background-images/dark-bg.jpg);
   --background-overlay: #0f172a;
@@ -26,7 +23,8 @@
 /* Base styles */
 html {
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-2);
+  @apply text-sm sm:text-base;
 }
 
 /* * {
@@ -38,8 +36,12 @@ html {
   color: var(--color-text);
 }
 
-.bg-bg {
-  background-color: var(--color-bg);
+.bg-bg-1 {
+  background-color: var(--color-bg-1);
+}
+
+.bg-bg-2 {
+  background-color: var(--color-bg-2);
 }
 
 .bg-surface {
