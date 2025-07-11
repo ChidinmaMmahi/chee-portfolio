@@ -1,4 +1,10 @@
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { FiLinkedin } from "react-icons/fi";
+import { LuGithub } from "react-icons/lu";
+import {
+  MdOutlineDarkMode,
+  MdOutlineLightMode,
+  MdWhatsapp,
+} from "react-icons/md";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { useTheme } from "../src/components/useTheme";
 import { About, Contact, Home, Projects, Skills } from "./pages";
@@ -66,8 +72,31 @@ function App() {
           </p>
         </div>
         <div>
-          <div>
-            <Link to=""></Link>
+          <div className="flex justify-end gap-x-5 mb-4">
+            <Link
+              to="https://github.com/ChidinmaMmahi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl"
+            >
+              <LuGithub />
+            </Link>
+            <Link
+              to="https://github.com/ChidinmaMmahi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl"
+            >
+              <FiLinkedin />
+            </Link>
+            <Link
+              to="https://github.com/ChidinmaMmahi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl"
+            >
+              <MdWhatsapp />
+            </Link>
           </div>
           <p className="text-sm">
             &copy; 2025 Chidinma Mmahi. All rights reserved.
