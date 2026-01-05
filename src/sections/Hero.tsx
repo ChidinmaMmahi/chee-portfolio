@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "../components";
+import { Button, SectionLayout } from "../components";
 import { useScrollTo } from "../hooks";
+import profilePic from "../assets/profile-pic.png";
 
 export const Hero = () => {
   const scrollTo = useScrollTo();
@@ -10,9 +11,9 @@ export const Hero = () => {
       id="home"
       className="sm:min-h-screen mt-32 sm:mt-0 flex items-center justify-center"
     >
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-32 sm:gap-10 px-6">
+      <SectionLayout extraClasses="flex flex-col items-center sm:flex-row gap-32 sm:gap-10 !py-0">
         <div>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Frontend Developer <br />
             crafting clean web experiences.
           </h1>
@@ -33,28 +34,26 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <motion.img
-            src="/me.jpg"
-            alt="Chidinma Mmahi"
-            className="size-56 lg:size-96 rounded-full object-cover border-4 bg-accent"
-            animate={{
-              y: [0, -10, 0],
-              boxShadow: [
-                "0px 20px 30px var(--shadow-100)",
-                "0px 10px 15px var(--shadow-100)",
-                "0px 20px 30px var(--shadow-100)",
-              ],
-            }}
-            transition={{
-              delay: 2,
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        </div>
-      </div>
+        <motion.img
+          src={profilePic}
+          alt="Chidinma Mmahi"
+          className="w-56 h-full md:w-80 lg:w-96 rounded-full object-cover object-center border-4 aspect-square"
+          animate={{
+            y: [0, -10, 0],
+            boxShadow: [
+              "0px 20px 30px var(--shadow-100)",
+              "0px 10px 15px var(--shadow-100)",
+              "0px 20px 30px var(--shadow-100)",
+            ],
+          }}
+          transition={{
+            delay: 2,
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </SectionLayout>
     </section>
   );
 };

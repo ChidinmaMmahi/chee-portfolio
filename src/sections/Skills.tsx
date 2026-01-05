@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { SectionLayout } from "../components";
 
 const skills = [
   "HTML",
@@ -20,24 +21,24 @@ export const Skills = () => {
 
       {/* content */}
       <motion.div
-        className="relative max-w-4xl mx-auto px-6 z-10"
+        className="relative z-10"
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-3xl text-accent font-bold mb-8">Skills</h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="border border-white/70 rounded-lg p-4 text-center"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+        <SectionLayout title="Skills">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {skills.map((skill) => (
+              <div
+                key={skill}
+                className="border border-white/70 rounded-lg p-4 text-center"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </SectionLayout>
       </motion.div>
     </section>
   );

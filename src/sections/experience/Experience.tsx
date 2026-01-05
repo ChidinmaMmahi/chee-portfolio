@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExperienceList } from "./experienceList";
+import { SectionLayout } from "../../components";
 
 const slideVariants = {
   left: {
@@ -14,10 +15,8 @@ const slideVariants = {
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-surface-200">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10 text-accent">Experience</h2>
-
+    <section id="experience" className="bg-surface-200">
+      <SectionLayout title="Experience">
         <div className="grid sm:grid-cols-2 gap-20">
           {ExperienceList.map((experience, index) => {
             const isEven = index % 2 === 0;
@@ -40,20 +39,18 @@ export const Experience = () => {
                 <h3 className="text-xl font-semibold mt-1">
                   {experience.jobTitle} -{" "}
                   <span className="text-base font-normal">
-                    {experience.employmentType}
+                    {experience.employer}
                   </span>
                 </h3>
 
-                <ul className="mt-4 space-y-2 text-gray-400 list-disc ml-4">
-                  {experience.responsibilities.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
+                <p className="mt-4 space-y-2 text-gray-400">
+                  {experience.responsibilities}
+                </p>
               </motion.div>
             );
           })}
         </div>
-      </div>
+      </SectionLayout>
     </section>
   );
 };

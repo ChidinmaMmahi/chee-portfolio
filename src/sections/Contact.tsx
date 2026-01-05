@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
-import { TypingText } from "../components";
+import { SectionLayout, TypingText } from "../components";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-24 text-center">
-      <div className="max-w-4xl mx-auto px-6 space-y-2">
+    <section id="contact" className="text-center">
+      <SectionLayout>
         <div>
           <TypingText
             text="Let’s build something together"
-            className="text-xl sm:text-3xl font-bold mb-4"
+            className="text-xl sm:text-3xl font-bold mb-10"
           />
         </div>
         <div>
           <TypingText
             text="Open to roles, freelance work, and collaborations."
-            className="text-gray-400 mb-8"
+            className="text-gray-400 mb-20"
           />
         </div>
 
@@ -34,7 +34,7 @@ export const Contact = () => {
         >
           Email Me
         </motion.a>
-      </div>
+      </SectionLayout>
     </section>
   );
 };

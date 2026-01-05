@@ -31,7 +31,7 @@ export const Header = ({ onAnimationComplete, showContent }: HeaderProps) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
       onAnimationComplete={onAnimationComplete}
-      className="p-4 sm:px-10 flex justify-between items-center fixed top-0 left-0 right-0 z-50 shadow-lg backdrop-blur-[10px] text-black dark:text-white"
+      className="p-4 sm:px-10 flex justify-between items-center fixed top-0 left-0 right-0 z-50 shadow-lg backdrop-blur-[10px] text-black dark:text-white dark:bg-black/20"
     >
       <p className="text-3xl font-bold italic">
         CM<span className="text-accent">.</span>
@@ -64,9 +64,10 @@ export const Header = ({ onAnimationComplete, showContent }: HeaderProps) => {
 
       <div className="flex items-center gap-x-2">
         <Button
-          href=""
+          href="/resume.pdf"
           title="Resume"
           variant="primary-outline"
+          target="_blank"
           extraClassnames="hover:bg-accent hover:text-white hover:opacity-500 font-semibold"
         />
 
