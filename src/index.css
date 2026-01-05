@@ -1,73 +1,39 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #16a393;
-  --color-text: #4b5563;
-  --color-bg-1: #f6f6f6;
-  --color-bg-2: #ffffff;
-  --color-surface: #4b5563;
+  --accent: #16a393;
+  --neutral-default: #4b5563;
+  --surface-200: #f6f6f6;
+  --surface-100: #ffffff;
+  --surface-700: #4b5563;
+  --shadow-100: #00000033;
   --background-image: url(/src/assets/background-images/light-bg.jpg);
-  --background-overlay: #0f172a0c;
 }
 
 .dark {
-  --color-primary: #16a393;
-  --color-text: #b8b6b6;
-  --color-bg-1: #0f172a;
-  --color-bg-2: #0f172aea;
-  --color-surface: #b8b6b6;
+  --accent: #16a393;
+  --neutral-default: #b8b6b6;
+  --surface-200: #0f172a;
+  --surface-100: #0f172aea;
+  --surface-700: #b8b6b6;
+  --shadow-100: #ffffff1a;
   --background-image: url(/src/assets/background-images/dark-bg.jpg);
-  --background-overlay: #0f172a;
 }
 
-/* Base styles */
+@theme {
+  /* colors */
+  --color-accent: var(--accent);
+  --color-neutral-default: var(--neutral-default);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-700: var(--surface-700);
+  --color-shadow-100: var(--shadow-100);
+
+  /* background images */
+  --image-background: var(--background-image);
+}
+
 html {
-  color: var(--color-text);
-  background-color: var(--color-bg-2);
-  @apply text-sm sm:text-base;
-}
-
-/* * {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-} */
-
-/* Custom utility classes */
-.text-text {
-  color: var(--color-text);
-}
-
-.bg-bg-1 {
-  background-color: var(--color-bg-1);
-}
-
-.bg-bg-2 {
-  background-color: var(--color-bg-2);
-}
-
-.bg-surface {
-  background-color: var(--color-surface);
-}
-
-.text-primary {
-  color: var(--color-primary);
-}
-
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
-.border-surface {
-  border-color: var(--color-surface);
-}
-
-.bg-image {
-  background-image: var(--background-image);
-  background-position: center;
-  background-size: cover;
-  /* backdrop-filter: blur(20px); */
-}
-
-.bg-overlay {
-  background-color: var(--background-overlay);
-  opacity: 0.8;
+  scroll-behavior: smooth;
 }
