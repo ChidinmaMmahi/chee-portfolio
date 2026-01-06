@@ -18,9 +18,8 @@ export const Contact = () => {
           />
         </div>
 
-        <motion.a
-          href="mailto:mmahichidinma336@outlook.com"
-          className="bg-primary px-5 py-2.5 text-white rounded-md border-[0.5px] bg-accent inline-block mt-6"
+        <motion.div
+          className="inline-block mt-6 p-[2px] rounded-md bg-gradient-to-r from-red-400 to-pink-500"
           animate={{
             y: [0, -8, 0],
             scale: [1, 1.05, 1],
@@ -32,8 +31,13 @@ export const Contact = () => {
           }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          Email Me
-        </motion.a>
+          <a
+            href="mailto:mmahichidinma336@outlook.com"
+            className="block px-5 py-2.5 rounded-md bg-red-900/50 hover:bg-red-900/70 text-white"
+          >
+            Email Me
+          </a>
+        </motion.div>
       </SectionLayout>
     </section>
   );

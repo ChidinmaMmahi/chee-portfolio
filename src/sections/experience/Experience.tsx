@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ExperienceList } from "./experienceList";
-import { SectionLayout } from "../../components";
+import { Button, SectionLayout } from "../../components";
+import { GoArrowUpRight } from "react-icons/go";
 
 const slideVariants = {
   left: {
@@ -49,6 +50,16 @@ export const Experience = () => {
               </motion.div>
             );
           })}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Button
+            href="/resume.pdf"
+            target="_blank"
+            title="View full resume"
+            variant="tertiary"
+            extraClassnames="!rounded-full !px-5 !py-3 !text-base"
+            endIcon={<GoArrowUpRight className="text-xl" />}
+          />
         </div>
       </SectionLayout>
     </section>
