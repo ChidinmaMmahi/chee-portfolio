@@ -17,14 +17,20 @@ export const About = () => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <SectionLayout title="About Me">
-        <p className="mb-4">
-          Hi! I’m Chidinma Mmahi, a passionate web developer with experience in
-          building responsive and interactive websites using React, Tailwind
-          CSS, and TypeScript. I enjoy turning ideas into functional and
-          beautiful digital experiences.
+      <SectionLayout
+        title="About Me"
+        extraClasses="lg:bg-[#fff4e392] lg:dark:bg-[#5d5d5a76] -mb-20 z-100 lg:rounded-t-xl"
+      >
+        <p className="mb-4 text-justify">
+          Hey there! I'm <b className="text-accent text-lg">Chidinma Mmahi</b>,
+          a frontend-focused engineer passionate about creating intuitive
+          digital experiences. I work primarily with React, TypeScript, and
+          Tailwind CSS, and I enjoy collaborating with cross-functional teams to
+          ship reliable, well-designed products. I’m always learning, refining
+          my craft, and exploring better ways to build for users and developers
+          alike.
         </p>
-        <p className="mb-6">
+        <p className="mb-6 text-justify">
           When I’m not coding, I love exploring new design trends, learning new
           technologies, and working on creative side projects.
         </p>

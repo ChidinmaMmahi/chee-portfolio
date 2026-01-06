@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button, SectionLayout } from "../components";
 import { useScrollTo } from "../hooks";
-import profilePic from "../assets/profile-pic.png";
+import profilePic from "/profile-pic.png";
 
 export const Hero = () => {
   const scrollTo = useScrollTo();
@@ -19,8 +19,7 @@ export const Hero = () => {
           </h1>
 
           <p className="mt-6 text-gray-400 max-w-md">
-            I build modern, responsive interfaces using React, TypeScript, and
-            Tailwind CSS.
+            Turning designs into responsive, high-performance interfaces.
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -28,7 +27,7 @@ export const Hero = () => {
 
             <Button
               title="Contact Me"
-              onClick={() => scrollTo("contact")}
+              href="mailto:mmahichidinma336@outlook.com"
               variant="secondary-outline"
             />
           </div>
