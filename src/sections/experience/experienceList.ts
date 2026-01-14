@@ -9,13 +9,13 @@ export const ExperienceList: ExperienceProps[] = [
   {
     jobDuration: "January 2025 – Present",
     jobTitle: "Software Engineer",
-    employer: "Moniepoint Plc (via Seadans Solutions)",
+    employer: "Seadans Solutions",
     responsibilities: "React · TypeScript · Tailwind · TanStack Query",
   },
   {
     jobDuration: "January 2025 – Present",
     jobTitle: "Frontend Developer",
-    employer: "Stears (via Seadans Solutions)",
+    employer: "Supreme Technologies",
     responsibilities: "React · TypeScript · GraphQL · Jest",
   },
   {
