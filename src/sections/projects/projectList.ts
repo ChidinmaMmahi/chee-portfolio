@@ -13,7 +13,7 @@ export const projectList: ProjectProps[] = [
     title: "Multi-Step Form System",
     description:
       "A React/TypeScript 5-step form (account setup, profile, contact, phone OTP verification, summary) with Zustand state management and localStorage persistence. Features responsive UI, theme switching, form validation, step navigation, and progress tracking.",
-    //webhref: "https://chi-multistepform.netlify.app",
+    webhref: "https://chi-multistepform.netlify.app",
     githref: "https://github.com/ChidinmaMmahi/multi-step-form-system",
     techStack: ["React", "TypeScript", "Tailwind"],
   },
@@ -22,7 +22,7 @@ export const projectList: ProjectProps[] = [
     title: "Crypto Dashboard",
     description:
       "An interactive crypto market explorer that lets users search, sort, and view detailed cryptocurrency prices in multiple currencies, featuring infinite scrolling, real-time data, and a responsive, high-performance UI.",
-    //webhref: "https://coinlyticscrypto.netlify.app",
+    webhref: "https://coinlyticscrypto.netlify.app",
     githref: "https://github.com/ChidinmaMmahi/crypto-dashboard",
     techStack: [
       "React",
@@ -40,7 +40,7 @@ export const projectList: ProjectProps[] = [
     title: "Recursive Menu Feature",
     description:
       "A component-driven app with a recursive tree structure (like VS Code’s file explorer) hosting interactive UI tools and mini-apps, including a star rating system, image slider, accordion, tic-tac-toe, QR code generator, and GitHub profile finder. Built for scalability, reusability, and clean state management.",
-    // webhref: "https://components-menu.netlify.app",
+    webhref: "https://components-menu.netlify.app",
     githref: "https://github.com/ChidinmaMmahi/Recursive-menu-feature",
     techStack: ["React", "TypeScript", "Tailwind CSS", "React Router"],
   },

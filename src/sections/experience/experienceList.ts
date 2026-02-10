@@ -7,19 +7,19 @@ interface ExperienceProps {
 
 export const ExperienceList: ExperienceProps[] = [
   {
-    jobDuration: "January 2025 – Present",
+    jobDuration: "July 2025 – Present",
     jobTitle: "Software Engineer",
     employer: "Seadans Solutions",
     responsibilities: "React · TypeScript · Tailwind · TanStack Query",
   },
   {
-    jobDuration: "January 2025 – Present",
+    jobDuration: "May 2025 – June 2025",
     jobTitle: "Frontend Developer",
     employer: "Supreme Technologies",
     responsibilities: "React · TypeScript · GraphQL · Jest",
   },
   {
-    jobDuration: "September 2024 – December 2024",
+    jobDuration: "November 2023 – April 2024",
     jobTitle: "Frontend Developer",
     employer: "Seadan Solutions",
     responsibilities: "React · JavaScript · Tailwind CSS",
