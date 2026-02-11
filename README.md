@@ -1,69 +1,118 @@
-# React + TypeScript + Vite
+## CheePortfolio – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CheePortfolio** is a modern, single-page developer portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
+It showcases professional experience, featured projects, technical skills, and contact details with smooth section-based navigation and subtle animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Build Tooling**: Vite, ESLint, TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📁 Project Structure (High-Level)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **`src/App.tsx`**: Sets up the router, global layout, header/footer, and page transition animation.
+- **`src/pages/Home.tsx`**: Renders the main one-page layout by stitching together all sections.
+- **`src/sections`**:
+  - `Hero`: Intro section with primary profile information.
+  - `About`: Short bio and overview.
+  - `Skills`: Visual mapping of technical skills.
+  - `Projects`: Showcases key projects from `projects/projectList.ts`.
+  - `Experience`: Work history from `experience/experienceList.ts`.
+  - `Contact`: Call-to-action/contact section.
+- **`src/components`**: Reusable UI pieces such as `Header`, `Footer`, `Button`, `SectionLayout`, and `TypingText`.
+- **`src/hooks`**: Custom hooks for active section tracking, smooth scrolling, and local storage.
+- **`public`**: Static assets such as profile images, project screenshots, and resume PDF.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+### 🔧 Getting Started
+
+#### 1. Prerequisites
+
+- **Node.js** (LTS recommended)
+- **npm** (comes with Node)
+
+#### 2. Install Dependencies
+
+In the project root:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 3. Run the Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Then open the printed local URL (usually `http://localhost:5173`) in your browser.
+
+#### 4. Create a Production Build
+
+```bash
+npm run build
+```
+
+#### 5. Preview the Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+### 🧱 Key Content Sources
+
+- **Projects**: Defined in `src/sections/projects/projectList.ts`.  
+  Each project includes:
+  - `image`: Screenshot path from `public/project-screenshots`.
+  - `title`, `description`
+  - `webhref`: Live demo link.
+  - `githref`: GitHub repository.
+  - `techStack`: Stack tags rendered in the UI.
+
+- **Experience**: Defined in `src/sections/experience/experienceList.ts`.  
+  Each item includes:
+  - `jobDuration`
+  - `jobTitle`
+  - `employer`
+  - `responsibilities`
+
+You can edit these files to update the portfolio content without touching layout logic.
+
+---
+
+### 🎨 Customization
+
+- **Branding & Text**: Update copy in the section components under `src/sections`.
+- **Profile & Screenshots**: Replace images in `public/` and `public/project-screenshots/`.
+- **Resume**: Swap out `public/resume.pdf` with your own file (keeping the same name or updating any links that reference it).
+- **Theme & Layout**: Adjust Tailwind classes in components and layouts; animations are configured via Framer Motion in components like `App.tsx` and individual sections.
+
+---
+
+### 🧹 Code Quality
+
+Lint the codebase with:
+
+```bash
+npm run lint
+```
+
+ESLint is configured for React + TypeScript and integrated with the Vite toolchain.
+
+---
+
+### 📄 License
+
+This project is currently intended for personal portfolio use.  
+If you plan to reuse or extend it for your own portfolio, feel free to fork and customize as needed.
