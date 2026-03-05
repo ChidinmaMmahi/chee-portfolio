@@ -9,6 +9,29 @@ interface ProjectProps {
 
 export const projectList: ProjectProps[] = [
   {
+    image: "/project-screenshots/docs-weaver.png",
+    title: "Docs Weaver",
+    description:
+      "A React/TypeScript PDF merging web app that allows users to upload, reorder, and combine multiple PDF files into a single downloadable document. Features drag-and-drop file handling, clean responsive UI built with Tailwind CSS, file preview cards, and structured state management for handling uploads and merge flow.",
+    webhref: "https://docs-weaver.netlify.app/",
+    githref: "https://github.com/ChidinmaMmahi/file-fusion",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind",
+      "Zustand",
+      "TipTap",
+      "dnd-kit",
+      "indexedDB",
+      "pdfjs-dist",
+      "mammoth",
+      "html2canvas",
+      "docx",
+      "jspdf",
+    ],
+  },
+  {
     image: "/project-screenshots/multi-step-form.png",
     title: "Multi-Step Form System",
     description:
